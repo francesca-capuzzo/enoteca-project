@@ -14,6 +14,8 @@ const super2 = new Spirit("Whiskey", "Bourbon", 17, 45, 50);
 const super3 = new Spirit("Rum", "Bacardi", 18, 35, 50);
 const super4 = new Spirit("Gin", "Gordon", 17, 40, 50);
 
+const super5 = new Spirit("gun", "gor", 17, 40, 50);
+
 console.log(beer1.toString());
 console.log(wine2.toString());
 console.log(super4.toString());
@@ -22,27 +24,63 @@ console.log(super4.toString());
 // console.log(wine2.calculatePrice());
 // console.log(super2.calculatePrice());
 
+
 const cellar = new Cellar();
-cellar.addbeers(beer1)
-cellar.addbeers(beer2)
-cellar.addbeers(beer3)
-cellar.addbeers(beer4)
-cellar.addwines(wine1)
-cellar.addwines(wine2)
-cellar.addwines(wine3)
-cellar.addwines(wine4)
-cellar.addsuperalcs(super1)
-cellar.addsuperalcs(super2)
-cellar.addsuperalcs(super3)
-cellar.addsuperalcs(super4)
+
+cellar.addBeers(beer1);
+cellar.addBeers(beer2);
+cellar.addBeers(beer3);
+cellar.addBeers(beer4);
+
+cellar.addWines(wine1);
+cellar.addWines(wine2);
+cellar.addWines(wine3);
+cellar.addWines(wine4);
+
+cellar.addSpirits(super1);
+cellar.addSpirits(super2);
+cellar.addSpirits(super3);
+cellar.addSpirits(super4);
 
 
-console.log(cellar.finditembyname("Rum"));
-console.log(cellar.finditembyname("Pino"));
-// console.log(cellar.finditembycode(wine2.uniqueCode));
-console.log(cellar.finditembygrape("vermentino"));
+// console.log(cellar.findItemByName("Ara"));
+// console.log(cellar.findItemByName("lapin"));
+// console.log(cellar.findItemByCode(wine1.uniqueCode));
+// console.log(cellar.findItemByGrape("vermentino"));
 
-beer1.addquantity(2)
-beer1.removequantity(24)
+
+//ADD - REMOVE QUANTITY:
+beer1.addQuantity(2)
+beer4.removeQuantity(24)
+
+
+//ADD - REMOVE QUANTITY BY CODE:
+super4.addBottlesQuantityByCode(super4.uniqueCode,1);
+super4.removeBottlesQuantityByCode(super4.uniqueCode, 30);
+
+
+//REMOVE BOTTLES BY CODE (all of them):
+// cellar.removeBottlesByCode(beer2.uniqueCode);
+// cellar.removeBottlesByCode(super3.uniqueCode);
+// cellar.removeBottlesByCode(wine1.uniqueCode);
+
+
+//NUMBER OF BOTTLES BY:
+//CODE:
+console.log("Item quantity by CODE: ",cellar.findQuantityByCode(super4.uniqueCode));
+//GRAPE VARIERY:
+console.log("Wine quantity by GRAPE: ",cellar.findQuantityByGrapeVariety("Sauvignon"));
+//YEAR:
+console.log("Wine quantity by YEAR: ",cellar.findQuantityByYear(2017));
+//TYPE OF BEER:
+console.log("Beer quantity by TYPE: ",cellar.findQuantityByBeerType("IPA"));
+
+
+//TOTAL NUMBER OF BOTTLES:
+console.log(cellar.findTotalNumberOfBeers());
+console.log(cellar.findTotalNumberOfWines());
+console.log(cellar.findTotalNumberOfSpirits());
+console.log(cellar.findTotalNumberOfBottles());
+
 
 console.log(cellar);

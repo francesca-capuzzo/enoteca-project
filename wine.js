@@ -16,7 +16,7 @@ class Wine extends Beverage{
         const priceWithTax = (this.priceBeforeTax + (this.priceBeforeTax * this.tax) / 100);
         const fullPriceWithIncrement = (priceWithTax * this.calculateWineAge()) / 100;
         const sum = priceWithTax + fullPriceWithIncrement;
-        return sum.toFixed(2);
+        return sum.toFixed(2) + "€";
     }
 
     toString(){

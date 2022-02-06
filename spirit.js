@@ -6,6 +6,6 @@ class Spirit extends Beverage{
 
     calculatePrice(){
         const priceWithTax = this.priceBeforeTax + ((this.priceBeforeTax * this.tax) / 100);
-        return (priceWithTax).toFixed(2);
+        return (priceWithTax).toFixed(2) + "€";
     }
 }

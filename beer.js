@@ -7,7 +7,7 @@ class Beer extends Beverage{
 
     calculatePrice(){
         let priceWithTax = (this.priceBeforeTax + (this.priceBeforeTax * this.tax) / 100).toFixed(2);
-        return priceWithTax;
+        return priceWithTax + "€";
     }
 
     toString(){
@@ -15,4 +15,6 @@ class Beer extends Beverage{
                      "BEER TYPE: " + this.beerType + "\n";
         return code; 
     }
+
+
 }
