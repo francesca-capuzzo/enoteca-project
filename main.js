@@ -53,6 +53,13 @@ cellar.addSpirits(super4);
 beer1.addQuantity(2)
 beer4.removeQuantity(24)
 
+// if (beer4.removeQuantity(24) === "You only have " + this.quantity + " in stock") {
+//     /// rimani sulla schermata di riduzione quantità
+// } else {
+//     /// rimozione riuscita, vai avanti
+// }   -----> in questo modo se ci fosse chiesto di utilizzare diverse lingue o cambiare il messaggio di errore, sarebbe più difficile da fare perchè va cambiato in 2 posti differenti
+//-------> per la soluzione con il FLAG, vedi esercizio di ANDREA.
+
 
 //ADD - REMOVE QUANTITY BY CODE:
 super4.addBottlesQuantityByCode(super4.uniqueCode,1);

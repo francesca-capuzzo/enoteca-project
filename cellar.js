@@ -183,4 +183,42 @@ class Cellar{
         }
         return "Total number of bottles in stock: " + count + " Bottles";
     }
+
+
+
+
+
+
+
+
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // IN CLASSE CON I FLAG TRUE E FALSE:
+
+    // ///FUNZIONA CON LA SEARCH BY NAME OR CODE DI ANDREA IN QUESTO CASO!!!!:
+
+    // addQuantityToCode(code, quantity){
+    //     const searchResultArray = this.findItemByCode(code);
+    //     if (searchResultArray.length === 1){
+    //         const beverage = searchResultArray[0];
+    //         beverage.addQuantity(quantity);
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    // removeQuantityToCode(code, quantity){
+    //     const searchResultArray = this.findItemByCode(code);
+    //     if (searchResultArray.length === 1){
+    //         const beverage = searchResultArray[0];
+    //         if (beverage.addQuantity(quantity)){
+    //             return true;
+    //         } else{
+    //             return false;
+    //         }
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }

@@ -7,6 +7,7 @@ class Beverage{
         this.quantity = quantity;
         this.insertioDate = new Date().getFullYear();
         this.uniqueCode = this.generatecode;
+        //NB se la quantity fosse su ordinazione, si può togliere dalla creazione dell'oggetto e inserirlo come proprietà (get - set)
     }
 
     get generatecode(){
@@ -33,7 +34,7 @@ class Beverage{
         if (this.quantity >= number) {
             return this.quantity -= number;
         }
-        return "Not enough bottles in stock"
+        return "You only have " + this.quantity + " in stock"
     }
 
 
